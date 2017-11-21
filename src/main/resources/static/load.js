@@ -1,7 +1,9 @@
-function loadData(url)
+function loadData(sort)
 {
+    var leagueNo = $('#league').val();
+    console.log(leagueNo);
     $.ajax({
-        url: url,
+        url: "http://api.eliteprospects.com/beta/leagues/" + leagueNo + "/playerstats?season=2017-2018&sort=" + sort + ":desc,GP&fields=player.id,player.firstName,player.lastName,GP,G,A,TP,PM,PIM,GGP,team.id,team.name&apikey=b2565bd81f55eb34ef6a335d78bc9563",
         data: {
             format: 'json'
         },
@@ -22,20 +24,24 @@ function loadData(url)
 }
 
 function sortByGoals() {
-    var url = "http://api.eliteprospects.com/beta/leagues/6/playerstats?season=2017-2018&sort=G:desc,GP&fields=player.id,player.firstName,player.lastName,GP,G,A,TP,PM,PIM,GGP,team.id,team.name&apikey=b2565bd81f55eb34ef6a335d78bc9563";
+    var sort = "G";
     $('#main').html("<tr><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
-    loadData(url);
+    loadData(sort);
 }
 
 function sortByAssists() {
-    var url = "http://api.eliteprospects.com/beta/leagues/6/playerstats?season=2017-2018&sort=A:desc,GP&fields=player.id,player.firstName,player.lastName,GP,G,A,TP,PM,PIM,GGP,team.id,team.name&apikey=b2565bd81f55eb34ef6a335d78bc9563";
+    var sort = "A";
     $('#main').html("<tr><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
-    loadData(url);
+    loadData(sort);
 }
 
 function sortByPM() {
-    var url = "http://api.eliteprospects.com/beta/leagues/6/playerstats?season=2017-2018&sort=PIM:desc,GP&fields=player.id,player.firstName,player.lastName,GP,G,A,TP,PM,PIM,GGP,team.id,team.name&apikey=b2565bd81f55eb34ef6a335d78bc9563";
+    var sort = "PIM";
     $('#main').html("<tr><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
-    loadData(url);
+    loadData(sort);
 
 }
+
+/* MESTIS = 28;
+NHL = 7;
+LIIGA =6; */
