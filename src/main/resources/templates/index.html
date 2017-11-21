@@ -8,17 +8,25 @@
     <script type="text/javascript" src="load.js"></script>
 </head>
 <body>
-<h1>Hockey!</h1>
+<h1>Hockey! 2017-2018 Season Stats</h1>
 <div>
-<table class="table table-striped" id="main">
-    <tr>
-        <th>Name</th>
-        <th>Goals</th>
-        <th>Assists</th>
-        <th>Penalty Minutes</th>
-    </tr>
-
-</table>
+    <button class="btn btn-success" onclick="sortByGoals()">Sort by goals</button>
+    <button class="btn btn-success" onclick="sortByAssists()">Sort by assists</button>
+    <button class="btn btn-success" onclick="sortByPM()">Sort by penalty minutes</button>
+    <select>
+        <option value="volvo">NHL</option>
+        <option value="saab">Liiga</option>
+        <option value="saab">Mestis</option>
+    </select>
+    <table class="table table-striped" id="main">
+        <tr>
+            <th>Name</th>
+            <th>Goals</th>
+            <th>Assists</th>
+            <th>Penalty Minutes</th>
+        </tr>
+    </table>
 </div>
+
 </body>
 </html>
