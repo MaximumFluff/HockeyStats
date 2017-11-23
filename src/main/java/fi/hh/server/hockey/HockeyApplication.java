@@ -15,7 +15,7 @@ public class HockeyApplication extends SpringBootServletInitializer {
 
 	@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+        return application.sources(HockeyApplication.class);
     }
 
     public static void main(String[] args) {
