@@ -5,16 +5,15 @@ import org.springframework.stereotype.Controller;
 
 
 @Controller
-@RequestMapping(value="/")
 public class hockeyController {
-    @RequestMapping(method=RequestMethod.GET)
-    public String load(){
-        return "index";
-    }
-
     @RequestMapping(value="/login")
     public String login() {
         return "login";
+    }
+
+    @RequestMapping(value = {"/", "/index"}, method=RequestMethod.GET)
+    public String load(){
+        return "index";
     }
 
 }

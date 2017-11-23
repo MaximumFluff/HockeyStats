@@ -24,7 +24,6 @@ public class User {
         this.username = username;
         this.passwordHash = passwordHash;
         this.role = role;
-        // TODO Auto-generated constructor stub
     }
 
     public User() { };
