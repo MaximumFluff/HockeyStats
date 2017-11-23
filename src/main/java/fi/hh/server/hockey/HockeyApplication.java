@@ -2,7 +2,6 @@ package fi.hh.server.hockey;
 
 import fi.hh.server.hockey.domain.User;
 import fi.hh.server.hockey.domain.UserRepository;
-import javafx.application.Application;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
