@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
     <head>
         <title>Hockey API App</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -13,8 +13,8 @@
             <div class="row">
                 <div class="col-m-6">
                     <button class="btn btn-success" onclick="sortByGoals()">Sort by goals</button>
-                    <button class="btn btn-success" onclick="sortByAssists()">Sort by assists</button>
-                    <button class="btn btn-success" onclick="sortByPM()">Sort by penalty minutes</button>
+                    <button sec:authorize="hasAuthority('ADMIN')" class="btn btn-success" onclick="sortByAssists()">Sort by assists</button>
+                    <button sec:authorize="hasAuthority('ADMIN')" class="btn btn-success" onclick="sortByPM()">Sort by penalty minutes</button>
                 </div>
                 <div class="col-m-4">
                     <select class="form-control" id="league">

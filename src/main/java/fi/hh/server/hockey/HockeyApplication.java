@@ -19,7 +19,7 @@ public class HockeyApplication {
         return (args) -> {
 
             // Create new users
-            User user1 = new User("user","$2a$04$zdGl8n9CPo7bKcURxZyBIeedqGpuR7b/B7051RZfotU5bFy00606i", "USER");
+            User user1 = new User("user","$2a$04$zdGl8n9CPo7bKcURxZyBIeedqGpuR7b/B7051RZfotU5bFy00606i1", "USER");
             User user2 = new User("admin","$2a$04$W1UHL2Hxfy88U/koDH3BquRgXC8aae4RUiM03JDguIfzsfnh6bFVi", "ADMIN");
             urepository.save(user1);
             urepository.save(user2);

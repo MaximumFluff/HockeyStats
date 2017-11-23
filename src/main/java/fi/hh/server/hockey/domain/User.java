@@ -12,14 +12,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
     private Long id;
-    // Username with unique constraint
     @Column(name = "username", nullable = false, unique = true)
     private String username;
     @Column(name = "password", nullable = false)
     private String passwordHash;
     @Column(name = "role", nullable = false)
     private String role;
-    // Getters and setters...
     public User(String username, String passwordHash, String role) {
         this.username = username;
         this.passwordHash = passwordHash;
