@@ -15,7 +15,7 @@ function loadData(sort)
             for (var i = 0; i < info.data.length; i++)
             {
                 var name = info.data[i].player.firstName + " " + info.data[i].player.lastName;
-                $('#main').append("<tr><td>" + name + "</td>" + "<td>" + info.data[i].G + "</td>" + "<td>" + info.data[i].A +  "</td>" + "<td>" + info.data[i].PIM + "</td></tr>");
+                $('#main').append("<tr><td>" + (i+1) + "</td>" + "<td>" + name + "</td>" + "<td>" + info.data[i].G + "</td>" + "<td>" + info.data[i].A +  "</td>" + "<td>" + info.data[i].PIM + "</td></tr>");
             }
             console.log("Loaded successfully!");
             console.log(info.data[0]);
@@ -25,19 +25,19 @@ function loadData(sort)
 
 function sortByGoals() {
     var sort = "G";
-    $('#main').html("<tr><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
+    $('#main').html("<tr><th>#</th><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
     loadData(sort);
 }
 
 function sortByAssists() {
     var sort = "A";
-    $('#main').html("<tr><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
+    $('#main').html("<tr><th>#</th><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
     loadData(sort);
 }
 
 function sortByPM() {
     var sort = "PIM";
-    $('#main').html("<tr><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
+    $('#main').html("<tr><th>#</th><th>Name</th><th>Goals</th><th>Assists</th><th>Penalty Minutes</th></tr>");
     loadData(sort);
 
 }
