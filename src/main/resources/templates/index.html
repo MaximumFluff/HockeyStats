@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <h1>Hockey! 2017-2018 Season Stats</h1>
             <div class="row">
-                <div class="col-m-8">
+                <div class="col-m-6">
                     <button class="btn btn-success" onclick="sortByGoals()">Sort by goals</button>
                     <button class="btn btn-success" onclick="sortByAssists()">Sort by assists</button>
                     <button class="btn btn-success" onclick="sortByPM()">Sort by penalty minutes</button>
@@ -22,6 +22,11 @@
                         <option value="6">Liiga</option>
                         <option value="28">Mestis</option>
                     </select>
+                </div>
+                <div class="col-m-2">
+                    <form th:action="@{/logout}" method="post">
+                        <input class="btn btn-danger" type="submit" value="Sign Out"/>
+                    </form>
                 </div>
                 <table class="table table-striped" id="main">
                     <tr>

@@ -12,4 +12,9 @@ public class hockeyController {
         return "index";
     }
 
+    @RequestMapping(value="/login")
+    public String login() {
+        return "login";
+    }
+
 }
