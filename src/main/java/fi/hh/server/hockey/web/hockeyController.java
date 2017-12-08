@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class hockeyController {
+    // Handle request mapping for root and login pages
     @RequestMapping(value="/login")
     public String login() {
         return "login";

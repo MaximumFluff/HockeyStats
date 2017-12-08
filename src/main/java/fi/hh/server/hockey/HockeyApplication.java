@@ -18,7 +18,7 @@ public class HockeyApplication {
     public CommandLineRunner Hockey(UserRepository urepository) {
         return (args) -> {
 
-            // Create new users
+            // Create new users, add guest and admin users
             User user1 = new User("user","$2a$04$hNvP6URpBfjyaq4hleQuOuvWQ2HLZErkz8Si7oyWIqaqmBTA4Ft.K", "USER");
             User user2 = new User("admin","$2a$04$W1UHL2Hxfy88U/koDH3BquRgXC8aae4RUiM03JDguIfzsfnh6bFVi", "ADMIN");
             urepository.save(user1);
