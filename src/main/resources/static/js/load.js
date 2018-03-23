@@ -6,7 +6,7 @@ function loadData(sort)
     //console.log(leagueNo);
     // This ajax call retrieves data from API
     $.ajax({
-        url: "//api.eliteprospects.com/beta/leagues/" + leagueNo + "/playerstats?season=2017-2018&sort=" + sort + ":desc,GP&fields=player.id,player.firstName,player.lastName,GP,G,A,TP,PM,PIM,GGP,team.id,team.name&apikey=b2565bd81f55eb34ef6a335d78bc9563",
+        url: "http://api.eliteprospects.com/beta/leagues/" + leagueNo + "/playerstats?season=2017-2018&sort=" + sort + ":desc,GP&fields=player.id,player.firstName,player.lastName,GP,G,A,TP,PM,PIM,GGP,team.id,team.name&apikey=b2565bd81f55eb34ef6a335d78bc9563",
         data: {
             format: 'json'
         },
