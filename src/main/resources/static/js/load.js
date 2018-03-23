@@ -12,9 +12,8 @@ function loadData(sort)
         },
         success: function(data)
         {
-
             $('#name').html(data.metadata);
-            var info = JSON.parse(data);
+            var info = data;
             for (var i = 0; i < info.data.length; i++)
             {
                 // This loop goes through data and prints into the table
